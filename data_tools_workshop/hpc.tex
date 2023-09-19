@@ -1,0 +1,399 @@
+% Presentation for CEMS Workshop ----------------------------------------
+% General Advice
+
+% The presentation's goal is convince people to read the paper, NOT to actually
+% present the paper
+% In this vein, DO NOT make the presentation overly technical
+% and try NOT to put on excessive notation such as assumptions, etc 
+% (this is difficult to do)
+
+% Ironically, applied people spend all of their time cleaning data etc but most
+% people end up talking about the theory 
+
+% and theory papers/presentations don't actually spend much time on the theory
+
+% Bonsoo thinks the 30 slides are quite ambitious...
+% Need to cut down even further, and make sure to speak slowly
+% Just communicate the main ideas...
+% 
+
+
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%add handout to get rid of pauses
+\documentclass[aspectratio=169,notheorems]{beamer}
+\usetheme{Boadilla}
+% Number tables/cpations properly
+\setbeamertemplate{caption}[numbered]
+% numebr theorems properly
+\setbeamertemplate{theorems}[numbered]
+\setbeamertemplate{theorem begin}
+{%
+  \inserttheoremheadfont
+  \inserttheoremname \inserttheoremnumber
+  \ifx \else\ \fi
+  \inserttheorempunctuation {}
+  \normalfont
+}
+\setbeamertemplate{theorem end}{%
+  % empty
+}
+% Customize bottom footline for longer title
+% Also get rid of total slide numbers here
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.6\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle\hspace*{3em}
+    \insertframenumber{} %/ \inserttotalframenumber\hspace*{1ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+\theoremstyle{plain}
+% Some notes
+% enumitem, etc do not work with beamer
+% beamer has some ways built in to do this
+% annoying...
+
+% beamer does not support authblk
+% so you will need to manually set up columns instead
+
+
+% allow affiliations, this needs to be disabled for beamer!
+%\usepackage{authblk}
+% Double spacing for draft paper, remove for tighter spacing
+\usepackage{setspace}
+%\doublespacing
+
+\usepackage{graphicx}
+% it seems that amsthm is the defualt, and most robust theorem package
+\usepackage{amsmath, amssymb, amsthm}
+% fancy W font
+\usepackage{mathrsfs}
+
+% Change so that pause is transparent
+% \setbeamercovered{transparent=25}
+
+% new theorem is created, whose counter is reset with every section
+\newtheorem{theorem}{Theorem}[]
+% new corollary environemnt is created, whose counter resets with every call of 
+% theorem
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}{Lemma}
+\newtheorem{sublemma}{Lemma}[lemma]
+\newtheorem{proposition}{Proposition}
+% remarks are typically not numbered
+\newtheorem*{remark}{Remark}
+\newtheorem{assump}{Assumption}
+% this requires the use of the amssymb
+\renewcommand\qedsymbol{$\blacksquare$}
+
+% Customize tranpose macro here
+\newcommand*{\tran}{\intercal}
+
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Allows for coloring different bits of equations, as well as hyperlinks
+\usepackage[]{xcolor}
+% \usepackage{soul}
+% \sethlcolor{yellow}
+% \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+% \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+%\hypersetup{
+%  pdftitle={Literature Review},
+%  hidelinks,
+%  pdfcreator={LaTeX via pandoc}}
+%\urlstyle{same} % disable monospaced font for URLs
+\usepackage{longtable}
+\usepackage{threeparttablex}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{caption}
+\usepackage{calc} % for calculating minipage widths
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+
+
+% Setup hyperref so that you can use \autoref
+\usepackage{hyperref}
+% hyperref^\trans autoref is good, but apparently cleveref is even better
+\usepackage{cleveref}
+% Fix up plurals so that it works for assumptions
+\crefname{assump}{Assumption}{Assumptions}
+
+% todonotes -----------------------------------------------
+% put % before what you want disabled
+% \usepackage{todonotes} % notes not showed
+\usepackage{todonotes} % notes showed
+
+% Select what to do with command \comment:  
+% \newcommand{\comment}[1]{}  %comment not showed
+\newcommand{\comment}[1]{\par {\color{blue} #1 \par}} %comment showed
+
+% enumerate package for customizing lists ---------------------
+\usepackage{bm}
+% change font here
+% \usepackage[charter]{mathdesign}
+%\usepackage[shortlabels]{enumitem}
+
+% \usepackage[thmmarks, amsmath, thref]{ntheorem}
+
+% Landscape
+\usepackage{pdflscape}
+
+\theoremstyle{plain}
+% \theorembodyfont{\itshape}
+
+%\theoremheaderfont{\itshape}
+
+\numberwithin{equation}{section}
+%\setlength{\topmargin}{-.7in}
+%\setlength{\textheight}{9.5in}
+%\setlength{\oddsidemargin}{-.3in}
+%\setlength{\textwidth}{7in}
+
+\usepackage{physics}
+\usepackage[style=apa,uniquename=false,uniquelist=false]{biblatex}
+\DeclareDelimFormat{nameyeardelim}{\addcomma\space}
+% not sure why, but only bibtex format works, 
+% even thouygh I tried to specify biblatex
+\addbibresource{../references2.bib}
+
+% Add some custome enumitem propositions, lemmas, theorems, etc
+%\newlist{propenum}{enumerate}{1} % also creates a counter called 'propenumi'
+%\setlist[propenum]{label=\alph*), ref=\theproposition~(\alph*)}
+%\crefalias{propenumi}{proposition} 
+%
+%\newlist{lemenum}{enumerate}{1} % also creates a counter called 'propenumi'
+%\setlist[lemenum]{label=\alph*), ref=\thelemma~(\alph*)}
+%\crefalias{lemenumi}{lemma} 
+%
+%\newlist{thmenum}{enumerate}{1} % also creates a counter called 'propenumi'
+%\setlist[thmenum]{label=\alph*), ref=\thetheorem~(\alph*)}
+%\crefalias{thmenumi}{theorem} 
+%
+%\newlist{assumpenum}{enumerate}{1} % also creates a counter called 'propenumi'
+%\setlist[assumpenum]{label=\alph*), ref=\theassump~(\alph*)}
+%\crefalias{assumpenumi}{assump} 
+
+%% Declare Macros -------------------------------------------------------
+
+% Basic statistics
+\newcommand{\convp}{\overset{p}{\to}}
+\newcommand{\convd}{\overset{d}{\to}}
+\newcommand{\limN}{\lim_{N \to \infty}}
+\newcommand{\limT}{\lim_{T \to \infty}}
+\newcommand{\plim}{\operatorname{plim}}
+\newcommand{\plimT}{\operatorname{plim}_{T \to \infty}}
+\newcommand{\plimN}{\operatorname{plim}_{N \to \infty}}
+\newcommand{\plimNT}{\operatorname{plim}_{N,T \to \infty}}
+% Fractions
+\newcommand{\fracT}{\frac{1}{T}}
+\newcommand{\fracTm}{\frac{1}{T_m}}
+\newcommand{\fracN}{\frac{1}{N}}
+\newcommand{\fracTN}{\frac{1}{TN}}
+
+% Sums
+\newcommand{\sumT}{\sum_{t = 1}^{T}}
+\newcommand{\sumTs}{\sum_{s = 1}^{T}}
+\newcommand{\sumN}{\sum_{i = 1}^{N}}
+\newcommand{\sumNj}{\sum_{j = 1}^{N}}
+\newcommand{\sumNk}{\sum_{k = 1}^{N}}
+
+\newcommand{\ceil}[1]{\left \lceil #1 \right \rceil }
+\newcommand{\floor}[1]{\left \lfloor #1 \right \rfloor }
+\newcommand{\sumTfloor}{\sum_{t = 1}^{\floor{\pi T}}}
+\newcommand{\sumTfloort}{\sum_{t = \floor{\pi T + 1}}^{T}}
+
+\newcommand{\sumTfloors}{\sum_{s = 1}^{\floor{\pi T}}}
+\newcommand{\sumTfloorts}{\sum_{s = \floor{\pi T + 1}}^{T}}
+% \newcommand{\rank}[1]{\operatorname{rank} #1 }
+\newcommand{\gt}{>}
+\newcommand{\lt}{<}
+
+% Op term macros
+\newcommand{\Opdelta}{O_p\left( \frac{1}{\delta_{NT}}\right) }
+\newcommand{\Opdeltasq}{O_p\left( \frac{1}{\delta_{NT}^2}\right)}
+\newcommand{\Opdeltaquart}{O_p\left( \frac{1}{\delta_{NT}^4}\right)}
+
+\newcommand{\OprtTdeltasq}{O_p\left( \frac{\sqrt{T}}{\delta_{NT}^2}\right)}
+\newcommand{\OprtNdeltasq}{O_p\left( \frac{\sqrt{N}}{\delta_{NT}^2}\right)}
+
+\newcommand{\OprtT}{O_p\left( \frac{1}{\sqrt{T}}\right)}
+\newcommand{\OprtN}{O_p\left( \frac{1}{\sqrt{N}}\right)}
+\newcommand{\OpT}{O_p\left( \frac{1}{T}\right)}
+\newcommand{\OpN}{O_p\left( \frac{1}{N}\right)}
+% General Op macro for anything arbitrary
+\newcommand{\Op}[1]{O_p \left( #1 \right) }
+
+% Indicator function
+\newcommand{\indicator}[1]{\mathbf{1} \left\lbrace #1 \right\rbrace }
+
+% Ttiles etc -------------------------------------------------------------------
+\title{Disentangling Structural Breaks in High Dimensional Factor Models}
+
+\author[Koo, Wong and Zhong]{%
+  \texorpdfstring{%
+    \begin{columns}
+      \column{.3333\linewidth}
+      \centering
+      Bonsoo Koo \\ Monash University
+      \column{.3333\linewidth}
+      \centering
+      Benjamin Wong \\ Monash University
+      \column{.3333\linewidth}
+      \centering
+      Ze Yu Zhong* \\ Monash University
+    \end{columns}
+ }
+ {Author 1, Author 2, Author 3}
+}
+
+%\affil{Monash University}
+% Add date that the document was compiled
+\date{\today}
+
+\begin{document}
+
+\section{Section 1}
+\begin{frame}
+\frametitle{Introduction to HPC}
+HPC can be well suited for some scientific workloads.
+
+Overview + hands on session specifically for R
+\begin{itemize}
+\item Monte Carlo
+\item Rolling Window
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Prerequisites}
+HPC account + Project
+\begin{itemize}
+\item Various computational projects available - MonARCH is specifically built for Monash staff/students
+\end{itemize}
+ssh client
+\begin{itemize}
+\item putty (Windows), terminal (macOS or Linux)
+\end{itemize}
+ftp client to access HPC files
+\begin{itemize}
+\item MobeXterm (Windows), Cyberduck (macOS), Nautilus/Dolphin (Linux)
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Login Node Setup}
+\begin{enumerate}
+\item Login to MonARCH
+	\begin{itemize}
+	\item ssh user@monarch.erc.monash.edu
+	\end{itemize}
+\item Load R modules
+	\begin{itemize}
+	\item module load R
+	\end{itemize}
+\item Setup folder for R libraries
+	\begin{itemize}
+	\item asd
+	\end{itemize}
+\item Install R libraries
+	\begin{itemize}
+	\item R
+	\item install.packages(``tidyverse'')
+	\end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Code Setup}
+Recommended to set up git repository containing all code
+\begin{itemize}
+\item cd project/user
+\item git clone
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Job Script (Bash)}
+
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Parallelization + Splitting Workloads}
+HPC can be well suited for parallelized/split workloads.
+
+This is done via the ARRAY environment variable
+\end{frame}
+
+\begin{frame}
+\frametitle{Monte Carlo Example}
+IV Regression Example:
+\begin{align}
+y = x_1 \beta_1 + e_1, \quad e_1 \sim N (0, 1) \\
+x_1 = \gamma z + e_2, \quad e_2 \sim N(0, 1) \\
+cor(e_1, e_2) = \rho
+\end{align}
+Interested in performance of IV estimator $\widehat{\beta_1}$ across different 
+\begin{itemize}
+\item Instrument strength $\gamma \in \left\lbrace 0, 0.25, 0.5\right\rbrace $
+\item Endogeneity $\rho \in \left\lbrace 0, 0.25, 0.5 \right\rbrace $
+\item Sample size $N \in \left\lbrace 100, 200, 500 \right\rbrace $
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Code}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Practical Tips}
+Do not request too many resources - this can take a long time to be allocated
+\end{frame}
+
+\begin{frame}
+\frametitle{Extra Resources}
+Data Fluency Workshops (free for students!):
+\begin{itemize}
+\item Introduction to Bash/Shell Scripts
+\item Introduction to HPC
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Advanced Issues}
+rcpp
+\begin{itemize}
+\item Compiling rcpp code on one array and asking other arrays to use this is inconsistent - no guarantee that different arrays are of same architecture
+\item Solution: ask explicitly for same compute instance nodes OR compile code for each array (inefficient, but not usually not prohibitively so)
+\end{itemize}
+\end{frame}
+
+
+
+
+\end{document}
