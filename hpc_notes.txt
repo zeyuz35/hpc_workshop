@@ -1,0 +1,3 @@
+# preliminary commands to run in login node
+# Install R libraries
+# 

@@ -39,13 +39,20 @@ dgp_spec_grid <- expand.grid(
   bigN = c(100, 200, 500)
 )
 
+# Pull relevant parameter specifcation according to array environment variable
+# remember to coerce to numeric
+row <- Sys.getenv("SLURM_ARRAY_TASK_ID") |> as.numeric()
 
+rho <- dgp_spec_grid$rho[row]
+gamma <- dgp_spec_grid$gamma[row]
+bigN <- dgp_spec_grid$bigN[row]
 
 # Set up for loop for replications
 bigR <- 1000
 data_results <- data.frame(
   replication = 1:bigR, 
-  beta_hat = NA
+  beta_hat = NA,
+  beta_hat_se = NA
 )
 
 for (r in 1:bigR) {
@@ -56,6 +63,8 @@ for (r in 1:bigR) {
   model <- AER::ivreg(y ~ -1 + x | -1 + z, data = data)
   # save coefficient
   data_results$beta_hat[r] <- model$coefficients
+  # save standard error
+  data_results$beta_hat_se[r] <- vcov(model)[1] |> sqrt()
 }
 
 data_results <- data_results |>
@@ -65,3 +74,11 @@ data_results <- data_results |>
       rho = rho, 
       gamma = gamma)
   )
+
+# Save Results --------------------------------------------------
+# naming convention of 
+# ivreg_bigN_rho_gamma.RDS
+
+results_name <- paste0("./results/ivreg_", bigN, "_", rho, "_", gamma, ".RDS")
+
+saveRDS(data_results, file = results_name)
