@@ -3,12 +3,20 @@
 library(MASS)
 library(ivreg)
 
-rho <- 1
-bigN <- 100
-beta_1 <- 1
-gamma <- 1
+# rho <- 1
+# bigN <- 100
+# beta_1 <- 1
+# gamma <- 1
 
 # Simulation Functions --------------------------------------------------
+# Inputs
+# bigN
+# beta_1
+# gamma
+# rho
+
+# Outputs
+# Dataframe containing y, x, z
 
 sim_data <- function(bigN, beta_1 = 1, gamma, rho) {
   # simulate errors
@@ -32,6 +40,7 @@ sim_data <- function(bigN, beta_1 = 1, gamma, rho) {
   )
   return(ret_list)
 }
+
 # HPC loop
 dgp_spec_grid <- expand.grid(
   rho = c(0, 0.25, 0.5),

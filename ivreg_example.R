@@ -57,3 +57,6 @@ data_results <- data_results |>
     rho = rho, 
     gamma = gamma)
   )
+
+# On a local machine, we would iterate through the entire dgp_spec_grid
+# in another for loop...
