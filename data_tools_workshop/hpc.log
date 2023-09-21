@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.8.28)  19 SEP 2023 13:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.8.28)  21 SEP 2023 11:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1285,24 +1285,24 @@ Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined,
  (./hpc.aux)
 \openout1 = `hpc.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 261.
+LaTeX Font Info:    ... okay on input line 261.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 261.
+LaTeX Font Info:    ... okay on input line 261.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 261.
+LaTeX Font Info:    ... okay on input line 261.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 261.
+LaTeX Font Info:    ... okay on input line 261.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 261.
+LaTeX Font Info:    ... okay on input line 261.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 261.
+LaTeX Font Info:    ... okay on input line 261.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 261.
+LaTeX Font Info:    ... okay on input line 261.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 261.
+LaTeX Font Info:    ... okay on input line 261.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 261.
+LaTeX Font Info:    ... okay on input line 261.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1360,82 +1360,82 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 275.
+Package hyperref Info: Link coloring OFF on input line 261.
  (./hpc.out)
 (./hpc.out)
 \@outlinefile=\write6
 \openout6 = `hpc.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 275.
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 261.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 275.
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 261.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 275.
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 261.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 275.
+(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 261.
 \symnumbers=\mathgroup12
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 275.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 261.
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
-(Font)              `pureletters' in the math version `normal' on input line 27
-5.
+(Font)              `pureletters' in the math version `normal' on input line 26
+1.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  OT1/mathkerncmss/m/sl --> T1/lmss/m/it on input line 27
-5.
+(Font)                  OT1/mathkerncmss/m/sl --> T1/lmss/m/it on input line 26
+1.
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
-(Font)              `pureletters' in the math version `bold' on input line 275.
+(Font)              `pureletters' in the math version `bold' on input line 261.
 
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/bx/sl --> T1/lmss/m/it on input line 2
-75.
+61.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 275.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 275.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 275.
+(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 261.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 261.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 261.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 275.
+(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 261.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 275.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 275.
+(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 261.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 261.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 275.
+(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 261.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 275.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 275.
+(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 261.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 261.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 275.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 261.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 275.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 261.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 275.
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 261.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 275.
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 261.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/lmss/b/n --> T1/lmr/b/n on input line 275.
+(Font)                  OT1/lmss/b/n --> T1/lmr/b/n on input line 261.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/lmss/b/n --> T1/lmss/b/n on input line 275.
+(Font)                  T1/lmss/b/n --> T1/lmss/b/n on input line 261.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 275.
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 261.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 275.
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 261.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 275.
-LaTeX Font Info:    Redeclaring symbol font `boldpureletters' on input line 275
+(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 261.
+LaTeX Font Info:    Redeclaring symbol font `boldpureletters' on input line 261
 .
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
 (Font)              `boldpureletters' in the math version `normal' on input lin
-e 275.
+e 261.
 LaTeX Font Info:    Overwriting symbol font `boldpureletters' in version `norma
 l'
 (Font)                  OT1/mathkerncmss/bx/sl --> T1/lmss/bx/it on input line 
-275.
+261.
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
 (Font)              `boldpureletters' in the math version `bold' on input line 
-275.
+261.
 LaTeX Font Info:    Overwriting symbol font `boldpureletters' in version `bold'
 
 (Font)                  OT1/mathkerncmss/bx/sl --> T1/lmss/bx/it on input line 
-275.
+261.
 
 (/usr/share/texmf-dist/tex/latex/translator/translator-basic-dictionary-English
 .dict
@@ -1468,7 +1468,7 @@ Package caption Info: End \AtBeginDocument code.
 Package todonotes Warning: The length marginparwidth is less than 2cm and will 
 most likely cause issues with the appearance of inserted todonotes. The issue c
 an be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to 
-loading the todonotes package. on input line 275.
+loading the todonotes package. on input line 261.
 
 Package biblatex Info: Trying to load language 'english' -> 'english-apa'...
 Package biblatex Info: ... file 'english-apa.lbx' found.
@@ -1504,111 +1504,113 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'hpc.bbl' found.
  (./hpc.bbl)
-Package biblatex Info: Reference section=0 on input line 275.
-Package biblatex Info: Reference segment=0 on input line 275.
+Package biblatex Info: Reference section=0 on input line 261.
+Package biblatex Info: Reference segment=0 on input line 261.
 
 (./hpc.nav) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts
 /enc/dvips/lm/lm-ec.enc}] [2
 
+] [3
+
 ]
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-326.
+315.
 
 (/usr/share/texmf-dist/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
-26.
+15.
 
 (/usr/share/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-326.
+315.
 
 (/usr/share/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-326.
+315.
 
 (/usr/share/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 326.
+(Font)              <6> on input line 315.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 326.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 326
+(Font)              <5> on input line 315.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 315
 .
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 326
+LaTeX Font Info:    Trying to load font information for U+msb on input line 315
 .
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 32
-6.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 31
+5.
 
 (/usr/share/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 326.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 315.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 326.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 315.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3
-26.
+15.
 
 (/usr/share/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <6> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 326.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 315.
 
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <5> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 326.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 315.
 
- [3
-
-] [4
+ [4
 
 ] [5
 
 ] [6
 
+] [7
+
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 366.
+(Font)              <10.95> on input line 356.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 366.
+(Font)              <8> on input line 356.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 366.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 356.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 366.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 356.
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 366.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 356.
 
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <8> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 366.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 356.
 
- [7
+ [8
 
 {/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf-dist/font
 s/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-maths
-y.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}] [8
-
-] [9
+y.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}] [9
 
 ] [10
 
 ] [11
+
+] [12
 
 ]
 \tf@nav=\write7
@@ -1628,10 +1630,10 @@ Package logreq Info: Writing requests to 'hpc.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38058 strings out of 477985
- 758489 string characters out of 5840058
+ 38119 strings out of 477985
+ 759794 string characters out of 5840058
  1865388 words of memory out of 5000000
- 57514 multiletter control sequences out of 15000+600000
+ 57573 multiletter control sequences out of 15000+600000
  585159 words of font info for 86 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  128i,15n,122p,1128b,5175s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1641,10 +1643,10 @@ t/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/lm
 /texmf-dist/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf-dist/fonts/type1/
 public/lm/lmsso10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><
 /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on hpc.pdf (11 pages, 125874 bytes).
+Output written on hpc.pdf (12 pages, 126594 bytes).
 PDF statistics:
- 369 PDF objects out of 1000 (max. 8388607)
- 327 compressed objects within 4 object streams
- 24 named destinations out of 1000 (max. 500000)
+ 396 PDF objects out of 1000 (max. 8388607)
+ 353 compressed objects within 4 object streams
+ 26 named destinations out of 1000 (max. 500000)
  57 words of extra memory for PDF output out of 10000 (max. 10000000)
 

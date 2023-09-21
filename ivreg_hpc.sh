@@ -4,6 +4,7 @@
 #SBATCH --mem-per-cpu=1024
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=16
+##SBATCH --array=1-27
 #SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --mail-user=ze-yu.zhong@monash.edu
 #SBATCH --output=ivreg_output.txt

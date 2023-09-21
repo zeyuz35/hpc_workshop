@@ -249,30 +249,20 @@
 \newcommand{\indicator}[1]{\mathbf{1} \left\lbrace #1 \right\rbrace }
 
 % Ttiles etc -------------------------------------------------------------------
-\title{Disentangling Structural Breaks in High Dimensional Factor Models}
+\title{HPC - An EBS Perspective}
 
-\author[Koo, Wong and Zhong]{%
-  \texorpdfstring{%
-    \begin{columns}
-      \column{.3333\linewidth}
-      \centering
-      Bonsoo Koo \\ Monash University
-      \column{.3333\linewidth}
-      \centering
-      Benjamin Wong \\ Monash University
-      \column{.3333\linewidth}
-      \centering
-      Ze Yu Zhong* \\ Monash University
-    \end{columns}
- }
- {Author 1, Author 2, Author 3}
+\author[]{Ze-Yu Zhong
 }
 
 %\affil{Monash University}
 % Add date that the document was compiled
-\date{\today}
+\date{Wednesday 27/09/2023}
 
 \begin{document}
+% Title Page
+\begin{frame}
+\titlepage
+\end{frame}
 
 \section{Section 1}
 \begin{frame}
@@ -281,8 +271,7 @@ HPC can be well suited for some scientific workloads.
 
 Overview + hands on session specifically for R
 \begin{itemize}
-\item Monte Carlo
-\item Rolling Window
+\item Monte Carlo study for the IV estimator
 \end{itemize}
 \end{frame}
 
@@ -357,22 +346,40 @@ y = x_1 \beta_1 + e_1, \quad e_1 \sim N (0, 1) \\
 x_1 = \gamma z + e_2, \quad e_2 \sim N(0, 1) \\
 cor(e_1, e_2) = \rho
 \end{align}
-Interested in performance of IV estimator $\widehat{\beta_1}$ across different 
+Interested in properties of IV estimator $\widehat{\beta_1}$ across different 
 \begin{itemize}
 \item Instrument strength $\gamma \in \left\lbrace 0, 0.25, 0.5\right\rbrace $
 \item Endogeneity $\rho \in \left\lbrace 0, 0.25, 0.5 \right\rbrace $
 \item Sample size $N \in \left\lbrace 100, 200, 500 \right\rbrace $
 \end{itemize}
+Record $\widehat{\beta}_1$ and $se(\widehat{\beta}_1)$ for each specification, for $R = 1000$ replications
 \end{frame}
 
 \begin{frame}
 \frametitle{Code}
-
+\begin{enumerate}
+\item Code up a minimum working example that runs on your local machine, e.g. for a small number of replications
+\item Take note of how long, extrapolate how much time it would take to run on the HPC cluster
+\item Convert the local code to something that is distributed across different HPC arrays
+\begin{itemize}
+\item Typically, letting each array handle a different DGP specification is most straightforward
+\end{itemize}
+\item Prepare job script, and submit
+\end{enumerate}
 \end{frame}
 
 \begin{frame}
-\frametitle{Practical Tips}
-Do not request too many resources - this can take a long time to be allocated
+\frametitle{Practical Advice}
+Other uses for HPC relevant for EBS:
+\begin{itemize}
+\item Rolling/expanding window estimation (use rsample to set up slices)
+\item Cross Validation (rsample)
+\item 
+\end{itemize}
+
+Do not request too many resources - this can take a long time to be allocated.
+
+Do not mess with job priority unless you have a legitimate reason - this is bad etiquette
 \end{frame}
 
 \begin{frame}
@@ -392,8 +399,5 @@ rcpp
 \item Solution: ask explicitly for same compute instance nodes OR compile code for each array (inefficient, but not usually not prohibitively so)
 \end{itemize}
 \end{frame}
-
-
-
 
 \end{document}
