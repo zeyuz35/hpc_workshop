@@ -1,23 +1,4 @@
-% Presentation for CEMS Workshop ----------------------------------------
-% General Advice
-
-% The presentation's goal is convince people to read the paper, NOT to actually
-% present the paper
-% In this vein, DO NOT make the presentation overly technical
-% and try NOT to put on excessive notation such as assumptions, etc 
-% (this is difficult to do)
-
-% Ironically, applied people spend all of their time cleaning data etc but most
-% people end up talking about the theory 
-
-% and theory papers/presentations don't actually spend much time on the theory
-
-% Bonsoo thinks the 30 slides are quite ambitious...
-% Need to cut down even further, and make sure to speak slowly
-% Just communicate the main ideas...
-% 
-
-
+% Premable -----------------------------------------------------------
 % Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
@@ -195,68 +176,15 @@
 %\setlist[assumpenum]{label=\alph*), ref=\theassump~(\alph*)}
 %\crefalias{assumpenumi}{assump} 
 
-%% Declare Macros -------------------------------------------------------
-
-% Basic statistics
-\newcommand{\convp}{\overset{p}{\to}}
-\newcommand{\convd}{\overset{d}{\to}}
-\newcommand{\limN}{\lim_{N \to \infty}}
-\newcommand{\limT}{\lim_{T \to \infty}}
-\newcommand{\plim}{\operatorname{plim}}
-\newcommand{\plimT}{\operatorname{plim}_{T \to \infty}}
-\newcommand{\plimN}{\operatorname{plim}_{N \to \infty}}
-\newcommand{\plimNT}{\operatorname{plim}_{N,T \to \infty}}
-% Fractions
-\newcommand{\fracT}{\frac{1}{T}}
-\newcommand{\fracTm}{\frac{1}{T_m}}
-\newcommand{\fracN}{\frac{1}{N}}
-\newcommand{\fracTN}{\frac{1}{TN}}
-
-% Sums
-\newcommand{\sumT}{\sum_{t = 1}^{T}}
-\newcommand{\sumTs}{\sum_{s = 1}^{T}}
-\newcommand{\sumN}{\sum_{i = 1}^{N}}
-\newcommand{\sumNj}{\sum_{j = 1}^{N}}
-\newcommand{\sumNk}{\sum_{k = 1}^{N}}
-
-\newcommand{\ceil}[1]{\left \lceil #1 \right \rceil }
-\newcommand{\floor}[1]{\left \lfloor #1 \right \rfloor }
-\newcommand{\sumTfloor}{\sum_{t = 1}^{\floor{\pi T}}}
-\newcommand{\sumTfloort}{\sum_{t = \floor{\pi T + 1}}^{T}}
-
-\newcommand{\sumTfloors}{\sum_{s = 1}^{\floor{\pi T}}}
-\newcommand{\sumTfloorts}{\sum_{s = \floor{\pi T + 1}}^{T}}
-% \newcommand{\rank}[1]{\operatorname{rank} #1 }
-\newcommand{\gt}{>}
-\newcommand{\lt}{<}
-
-% Op term macros
-\newcommand{\Opdelta}{O_p\left( \frac{1}{\delta_{NT}}\right) }
-\newcommand{\Opdeltasq}{O_p\left( \frac{1}{\delta_{NT}^2}\right)}
-\newcommand{\Opdeltaquart}{O_p\left( \frac{1}{\delta_{NT}^4}\right)}
-
-\newcommand{\OprtTdeltasq}{O_p\left( \frac{\sqrt{T}}{\delta_{NT}^2}\right)}
-\newcommand{\OprtNdeltasq}{O_p\left( \frac{\sqrt{N}}{\delta_{NT}^2}\right)}
-
-\newcommand{\OprtT}{O_p\left( \frac{1}{\sqrt{T}}\right)}
-\newcommand{\OprtN}{O_p\left( \frac{1}{\sqrt{N}}\right)}
-\newcommand{\OpT}{O_p\left( \frac{1}{T}\right)}
-\newcommand{\OpN}{O_p\left( \frac{1}{N}\right)}
-% General Op macro for anything arbitrary
-\newcommand{\Op}[1]{O_p \left( #1 \right) }
-
-% Indicator function
-\newcommand{\indicator}[1]{\mathbf{1} \left\lbrace #1 \right\rbrace }
-
 % Ttiles etc -------------------------------------------------------------------
-\title{HPC - An EBS Perspective}
+\title{High Performance Computing - An EBS Perspective}
 
 \author[]{Ze-Yu Zhong
 }
 
 %\affil{Monash University}
 % Add date that the document was compiled
-\date{Wednesday 27/09/2023}
+\date{Wednesday 27 September 2023}
 
 \begin{document}
 % Title Page
@@ -266,13 +194,19 @@
 
 \section{Section 1}
 \begin{frame}
-\frametitle{Introduction to HPC}
-HPC can be well suited for some scientific workloads.
-
-Overview + hands on session specifically for R
+\frametitle{High Performance Computing for Econometrics}
+HPC can be well suited for some scientific workloads, such as those in Econometrics.
+\medskip
+Hands on session Agenda:
 \begin{itemize}
-\item Monte Carlo study for the IV estimator
+\item Overview + Prerequisites
+\item Login Node Setup
+\item IV Estimator
+\item Bash Script
 \end{itemize}
+Recommended that people try to code/follow along
+\medskip
+https://github.com/zeyuz35/hpc\_workshop
 \end{frame}
 
 \begin{frame}
@@ -302,40 +236,18 @@ ftp client to access HPC files
 	\begin{itemize}
 	\item module load R
 	\end{itemize}
-\item Setup folder for R libraries
-	\begin{itemize}
-	\item asd
-	\end{itemize}
+\item Link folder for R libraries (R\_LIBS)
 \item Install R libraries
 	\begin{itemize}
 	\item R
 	\item install.packages(``tidyverse'')
 	\end{itemize}
+\item Copy code over to cluster
+	\begin{itemize}
+	\item Recommended to use git
+	\item cd project/user \&\& git clone 
+	\end{itemize}
 \end{enumerate}
-\end{frame}
-
-\begin{frame}
-\frametitle{Code Setup}
-Recommended to set up git repository containing all code
-\begin{itemize}
-\item cd project/user
-\item git clone
-\end{itemize}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Job Script (Bash)}
-
-
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Parallelization + Splitting Workloads}
-HPC can be well suited for parallelized/split workloads.
-
-This is done via the ARRAY environment variable
 \end{frame}
 
 \begin{frame}
@@ -344,7 +256,7 @@ IV Regression Example:
 \begin{align}
 y = x_1 \beta_1 + e_1, \quad e_1 \sim N (0, 1) \\
 x_1 = \gamma z + e_2, \quad e_2 \sim N(0, 1) \\
-cor(e_1, e_2) = \rho
+cor(e_1, e_2) = \rho \nonumber
 \end{align}
 Interested in properties of IV estimator $\widehat{\beta_1}$ across different 
 \begin{itemize}
@@ -369,6 +281,17 @@ Record $\widehat{\beta}_1$ and $se(\widehat{\beta}_1)$ for each specification, f
 \end{frame}
 
 \begin{frame}
+\frametitle{Job Script using Bash}
+See documentation for basic Bash script.
+\medskip
+Parallelization:
+\begin{itemize}
+\item HPC can be well suited for parallelized/split workloads
+\item This is done via the ARRAY environment variable
+\end{itemize}
+\end{frame}
+
+\begin{frame}
 \frametitle{Practical Advice}
 Other uses for HPC relevant for EBS:
 \begin{itemize}
@@ -377,9 +300,9 @@ Other uses for HPC relevant for EBS:
 \item Bootstrap/Jackknife
 \item Access to expensive GPUs (advanced)
 \end{itemize}
-
+\medskip
 Do not request too many resources - this can take a long time to be allocated.
-
+\medskip
 Do not mess with job priority unless you have a legitimate reason - this is bad etiquette
 \end{frame}
 
