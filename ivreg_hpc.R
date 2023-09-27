@@ -67,7 +67,7 @@ data_results <- data.frame(
 for (r in 1:bigR) {
   set.seed(r)
   # simulate data
-  data <- sim_data(bigN, beta_1, gamma, rho)
+  data <- sim_data(bigN, beta_1 = NULL, gamma, rho)
   # 2sls estimation
   model <- AER::ivreg(y ~ -1 + x | -1 + z, data = data)
   # save coefficient
