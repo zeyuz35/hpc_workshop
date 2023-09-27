@@ -13,5 +13,4 @@ module load gsl/2.7
 module load R/4.2.2-mkl
 export R_LIBS=~/R/libs:${R_LIBS}
 
-cd df34/zeyuz/hpc_workshop/
-R --vanilla < simulation/ivreg_hpc.R
+R --vanilla < ivreg_hpc.R
