@@ -69,7 +69,7 @@ for (r in 1:bigR) {
   # simulate data
   data <- sim_data(bigN, beta_1 = 1, gamma, rho)
   # 2sls estimation
-  model <- AER::ivreg(y ~ -1 + x | -1 + z, data = data)
+  model <- ivreg(y ~ -1 + x | -1 + z, data = data)
   # save coefficient
   data_results$beta_hat[r] <- model$coefficients
   # save standard error
