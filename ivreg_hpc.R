@@ -22,7 +22,7 @@ sim_data <- function(bigN, beta_1 = 1, gamma, rho) {
   # simulate errors
   e_Sigma <- matrix(c(1, rho, rho, 1), nrow = 2, ncol = 2)
   e <- mvrnorm(
-    n = bigN, m = c(0, 0), Sigma = e_Sigma
+    n = bigN, mu = c(0, 0), Sigma = e_Sigma
   )
   e1 <- e[, 1]
   e2 <- e[, 2]
