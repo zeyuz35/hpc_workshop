@@ -1,6 +1,6 @@
 #!/bin/env bash
 #SBATCH --job-name=ivreg_hpc
-#SBATCH --time=24:00:00
+#SBATCH --time=2:00:00
 #SBATCH --mem-per-cpu=1024
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
